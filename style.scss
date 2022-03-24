@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background 0.2s linear;
+
+    &.red{
+        background-color: red;
+    }
+
+    .check{
+        opacity: 0;
+
+        &:checked + .icon .ball{
+         transform: translateX(30px);
+        }
+    }
+    .icon{
+        width: 60px;
+        height: 28px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        border-radius: 20px;
+        position: relative;
+        background-color: #333;
+        transform: scale(1.5);
+
+        .fa-sun{
+            color: yellow;
+        }
+
+        .fa-moon{
+            color: white;
+        }
+        .ball{
+            width: 22px;
+            height: 22px;
+            border-radius: 50px;
+            background-color: white;
+            position: absolute;
+            transition: transform 0.2s linear;
+            
+        }
+    }
+}
